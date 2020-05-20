@@ -22,7 +22,7 @@ var defaultConfig config
 
 func init() {
 	baseDir, err := filepath.Abs(os.Getenv("KEYVAL_STORAGE_FS_BASE_DIR"))
-	fmt.Println(baseDir)
+	fmt.Println("[I] [Storage.Filesystem] baseDir =", baseDir)
 	defaultConfig.BaseDir = baseDir
 	if err != nil {
 		panic("[E] [Storage.Filesystem] cannot assign base directory")
